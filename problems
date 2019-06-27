@@ -1,0 +1,43 @@
+                        LIST OF PROBLEMS 
+
+PROBLEM: 1
+
+b40bYY 4: 19 NBiNE XX 1001060070.html
+b18bYY 33: 33 NBiNE XX 1001060070.html
+
+letter 'i' mis tagged of <a> </a> tags
+
+FIXED: $value=preg_replace('#^(\s*[a-z]\s*)$#','',$value);//remove  expressions kind of  "b"> I. </a> before tagged in NB NE  in new_html_parser.php
+
+PROBLEM: 2
+
+example: class="b">Da 10:13 <strong>M.</strong>,</a> 
+lonely letter tagged by <strong>  inside correct link <a>
+
+location:file:///home/dmi/html100/1001060070.html
+
+comment: if this letter is number of chapter or verse in roman digits ?
+solve: except from statistic part of string with loss of small bit of statistic
+NOT FIXED
+
+PROBLEM 3
+
+
+location: file:///home/dmi/html100/1001060076.html
+
+after correct complete link follows list of link by one book, and book name is simple text,not tagged
+
+solve: except from statistic whole file
+
+NOT FIXED 
+
+
+PROBLEM 4
+
+b2bYY 3: 15 34: 5- 7 1 NBcorNE 10: 12 XX 
+
+in final string uncertainity of digit: verse  or part of book name?
+
+LOCATION 1101989266.html
+
+POSSIBLE SOLVATION: pre handling of value kind of ^[123]\s[a-z]$,transforming \s to  
